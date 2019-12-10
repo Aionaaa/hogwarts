@@ -25,12 +25,14 @@ class CharacterBox extends Component{
   }
 
   render(){
-    return(
-      // <h2>CharacterBox</h2>
-      <CharacterSelector
-      characters={this.state.characters}
-      onCharacterSelected={this.handleCharacterSelected}/>
-      // <CharacterDetail character={this.state.currentCharacter}/>
+    return (
+      <Fragment>
+        <h2>CharacterBox</h2>
+        <CharacterSelector
+        characters={this.state.characters}
+        onCharacterSelected={this.handleCharacterSelected}/>
+        <CharacterDetail character={this.state.currentCharacter}/>
+      </Fragment>
     );
   }
 }
